@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit 1">
+    <test name="Test 1">
+        <parameter name="query" value="select * from actor"></parameter>
+        <classes>
+            <class name="JDBC.Gun2._03_Soru"></class>
+        </classes>
+    </test>
+
+<!--    <test name="Test 2">-->
+<!--        <parameter name="query" value="samsung"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="JDBC.Gun2._03_Soru"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
