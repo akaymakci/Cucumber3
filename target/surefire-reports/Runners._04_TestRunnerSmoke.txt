@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: Runners._04_TestRunnerSmoke
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.04 s - in Runners._04_TestRunnerSmoke
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 46.152 s <<< FAILURE! - in Runners._04_TestRunnerSmoke
+runScenario(Runners._04_TestRunnerSmoke)  Time elapsed: 44.781 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //ms-text-field[@formcontrolname='name']//input' (tried for 30 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//ms-text-field[@formcontrolname='name']//input"}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_331'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64b1155ae3cba9f4aaf54b33fcc4eefd, findElement {using=xpath, value=//ms-text-field[@formcontrolname='name']//input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\agkay\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55053}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55053/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64b1155ae3cba9f4aaf54b33fcc4eefd
+
