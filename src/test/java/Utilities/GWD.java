@@ -82,11 +82,13 @@ public class GWD {
                     chromeDriverService.sendOutputTo(NullOutputStream.NULL_OUTPUT_STREAM);
                     WebDriverManager.chromedriver().setup();
                     //driver = new ChromeDriver(chromeDriverService);
-
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
-                    threadDriver.set(new ChromeDriver(options));
-
+                    if (!runningFromIntelliJ()) {
+                        ChromeOptions options = new ChromeOptions();
+                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
+                        threadDriver.set(new ChromeDriver(options));
+                    }
+                    else
+                        threadDriver.set(new ChromeDriver());
 
 //                    Bekle(2);
                     break;
@@ -155,5 +157,10 @@ public class GWD {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static boolean runningFromIntelliJ(){
+        String classPath = System.getProperty("java.class.path");
+        return classPath.contains("idea_rt.jar");
     }
 }
