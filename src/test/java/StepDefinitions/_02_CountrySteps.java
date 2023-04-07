@@ -40,7 +40,7 @@ public class _02_CountrySteps {
     public void createACountry() {
 //        String randomGenName= RandomStringUtils.randomAlphabetic(8);
 //        String randomGenCode= RandomStringUtils.randomNumeric(4);
-        //dc.findAndClick("addButton");
+        dc.findAndClick("addButton");
         dc.findAndSend("nameInput",randomGenName);
         dc.findAndSend("codeInput",randomGenCode);
         dc.findAndClick("saveButton");
